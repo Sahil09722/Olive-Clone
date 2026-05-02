@@ -15,45 +15,47 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="py-24 bg-[#F8F9FA]">
-      <div className="max-w-3xl mx-auto px-6 md:px-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-[#2D3436] tracking-tight mb-12">
-          Frequently Asked Questions
-        </h2>
+    <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-20 md:py-28">
+      <section className="py-16 md:py-24 bg-[#F5FAF6] border border-[#A7C957]/40 rounded-[32px] md:rounded-[40px] relative overflow-hidden">
+        <div className="max-w-3xl mx-auto px-6 md:px-10 relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-[#2D3436] tracking-tight mb-12">
+            Frequently Asked Questions
+          </h2>
 
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <motion.div 
-              key={index}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl border border-gray-200 overflow-hidden"
-            >
-              <button
-                className="w-full px-6 py-5 flex items-center justify-between text-left font-bold text-[#2D3436] hover:bg-gray-50 transition-colors"
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm"
               >
-                {faq.q}
-                {openIndex === index ? <Minus className="text-[#386641] shrink-0" size={20} /> : <Plus className="text-gray-400 shrink-0" size={20} />}
-              </button>
-              
-              <AnimatePresence>
-                {openIndex === index && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    className="px-6 pb-5 text-gray-600"
-                  >
-                    {faq.a}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
-          ))}
+                <button
+                  className="w-full px-6 py-5 flex items-center justify-between text-left font-bold text-[#2D3436] hover:bg-gray-50 transition-colors"
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                >
+                  {faq.q}
+                  {openIndex === index ? <Minus className="text-[#386641] shrink-0" size={20} /> : <Plus className="text-gray-400 shrink-0" size={20} />}
+                </button>
+                
+                <AnimatePresence>
+                  {openIndex === index && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="px-6 pb-5 text-gray-600"
+                    >
+                      {faq.a}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

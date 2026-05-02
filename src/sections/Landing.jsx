@@ -1,1 +1,3 @@
-export default function Landing() { return (<div>Landing Section</div>); }
+export default function Landing() {
+  return <div>Landing Section</div>;
+}

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Benefits() {
   return (
-    <section className="py-24 bg-white" id="benefits">
+    <section className="py-20 md:py-28 bg-white" id="benefits">
       <div className="max-w-[1200px] mx-auto px-6 md:px-10">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
