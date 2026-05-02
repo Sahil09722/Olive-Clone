@@ -1,16 +1,30 @@
-# React + Vite
+# Olive Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautiful, fully-animated frontend clone of the Olive App website.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project is built using modern web development technologies to ensure a fast, responsive, and beautifully animated user interface:
 
-## React Compiler
+- **Framework**: [React](https://react.dev/) via [Vite](https://vitejs.dev/)
+- **Styling**: [TailwindCSS v4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Initialization
 
-## Expanding the ESLint configuration
+Follow these steps to set up and run the project locally:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Install Dependencies**
+   Run the following command in the project directory to install all required packages:
+   ```bash
+   npm install
+   ```
+
+2. **Run the Development Server**
+   Start the Vite development server to view the project in your browser:
+   ```bash
+   npm run dev
+   ```
+
+The application will typically be available at `http://localhost:5173`.
